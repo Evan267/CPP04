@@ -14,21 +14,21 @@
 
 WrongCat::WrongCat(void)
 {
-	std::cout << "Default cat constructor called" << std::endl;
+	std::cout << "Default wrong cat constructor called" << std::endl;
 	this->_setType("WrongCat");
 	return ;
 }
 
-WrongCat::WrongCat(const WrongCat &obj)
+WrongCat::WrongCat(const WrongCat &obj): WrongAnimal(obj)
 {
-	std::cout << "Copy cat constructor called" << std::endl;
+	std::cout << "Copy wrong cat constructor called" << std::endl;
 	*this = obj;
 	return ;
 }
 
 WrongCat::~WrongCat(void)
 {
-	std::cout << "Default cat destructor called" << std::endl;
+	std::cout << "Default wrong cat destructor called" << std::endl;
 	return ;
 }
 

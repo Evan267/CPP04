@@ -20,7 +20,7 @@ Dog::Dog(void)
 	return ;
 }
 
-Dog::Dog(const Dog &obj)
+Dog::Dog(const Dog &obj):Animal(obj)
 {
 	std::cout << "Copy dog constructor called" << std::endl;
 	this->_setType(obj.type);
@@ -48,6 +48,11 @@ Dog&	Dog::operator=(const Dog &obj)
 void	Dog::makeSound(void) const
 {
 	std::cout << "Waf" << std::endl;
+}
+
+Brain	*Dog::getBrain(void) const
+{
+	return (this->brain);
 }
 
 void	Dog::_setType(std::string value)

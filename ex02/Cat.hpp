@@ -22,8 +22,9 @@ public:
 	Cat(void);
 	Cat(const Cat &obj);
 	~Cat(void);
-	Cat&		operator=(const Cat &obj);
+	Cat&			operator=(const Cat &obj);
 	virtual void	makeSound(void) const;
+	Brain			*getBrain(void) const;
 
 private:
 

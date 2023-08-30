@@ -19,7 +19,7 @@ Cat::Cat(void)
 	return ;
 }
 
-Cat::Cat(const Cat &obj)
+Cat::Cat(const Cat &obj): Animal(obj)
 {
 	std::cout << "Copy cat constructor called" << std::endl;
 	*this = obj;

@@ -21,11 +21,13 @@ public:
 	Brain(void);
 	Brain(const Brain &obj);
 	~Brain(void);
-	Brain&	operator=(const Brain &obj);
+	Brain&		operator=(const Brain &obj);
+	void		setIdea(std::string str, int id);
+	std::string	getIdea(int id) const;
 
 private:
 
-	std::string	ideas[100];
+	std::string	_ideas[100];
 
 };
 

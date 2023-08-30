@@ -6,7 +6,7 @@
 /*   By: eberger <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 17:59:21 by eberger           #+#    #+#             */
-/*   Updated: 2023/06/08 18:13:53 by eberger          ###   ########.fr       */
+/*   Updated: 2023/06/08 17:53:58 by eberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,16 @@
 
 int	main(void)
 {
-	const Animal*	j = new Dog();
-	const Animal*	i = new Cat();
+	const Dog*	j = new Dog();
+	const Cat*	i = new Cat();
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
+	std::cout << j->getType() << std::endl;
+	std::cout << i->getType() << std::endl;
 	i->makeSound();
 	j->makeSound();
+
+	i->getBrain()->setIdea("Je suis un chat", 0);
+	std::cout << "idea " << i->getBrain()->getIdea(0) << std::endl;
 	
 	delete j;
 	delete i;

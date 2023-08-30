@@ -22,7 +22,7 @@ public:
 	WrongCat(const WrongCat &obj);
 	~WrongCat(void);
 	WrongCat&		operator=(const WrongCat &obj);
-	virtual void	makeSound(void) const;
+	void	makeSound(void) const;
 
 private:
 

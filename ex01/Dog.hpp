@@ -22,8 +22,9 @@ public:
 	Dog(void);
 	Dog(const Dog &obj);
 	~Dog(void);
-	Dog&		operator=(const Dog &obj);
+	Dog&			operator=(const Dog &obj);
 	virtual void	makeSound(void) const;
+	Brain			*getBrain(void) const;
 
 private:
 

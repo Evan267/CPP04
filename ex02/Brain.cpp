@@ -20,8 +20,15 @@ Brain::Brain(void)
 
 Brain::Brain(const Brain &obj)
 {
+	int	i;
+
+	i = 0;
 	std::cout << "Copy brain constructor called" << std::endl;
-	std::copy(std::begin(obj.ideas), std::end(obj.ideas), std::begin(this->ideas));
+	while (i < 100)
+	{
+		this->_ideas[i] = obj._ideas[i];
+		i++;
+	}
 	return ;
 }
 
@@ -33,9 +40,34 @@ Brain::~Brain(void)
 
 Brain& Brain::operator=(const Brain &obj)
 {
+	int	i;
+
+	i = 0;
 	if (this != &obj)
 	{
-		std::copy(std::begin(obj.ideas), std::end(obj.ideas), std::begin(this->ideas));
+		while (i < 100)
+		{
+			this->_ideas[i] = obj._ideas[i];
+			i++;
+		}
 	}
 	return (*this);
+}
+
+void	Brain::setIdea(std::string str, int id)
+{
+	if (id >= 0 && id < 100)
+		this->_ideas[id] = str;
+	else
+		std::cout << "id invalid" << std::endl;
+}
+
+std::string	Brain::getIdea(int id) const
+{
+	if (id < 0 || id >= 100)
+	{
+		std::cout << "id transmis a getIdea est incorrect" << std::endl;
+		return (NULL);
+	}
+	return (this->_ideas[id]);
 }

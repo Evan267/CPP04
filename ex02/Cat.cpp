@@ -20,7 +20,7 @@ Cat::Cat(void)
 	return ;
 }
 
-Cat::Cat(const Cat &obj)
+Cat::Cat(const Cat &obj):Animal(obj)
 {
 	std::cout << "Copy cat constructor called" << std::endl;
 	this->_setType(obj.type);
@@ -48,6 +48,11 @@ Cat&	Cat::operator=(const Cat &obj)
 void	Cat::makeSound(void) const
 {
 	std::cout << "Miaou" << std::endl;
+}
+
+Brain	*Cat::getBrain(void) const
+{
+	return (this->brain);
 }
 
 void	Cat::_setType(std::string value)

@@ -23,7 +23,7 @@ public:
 	virtual ~WrongAnimal(void);
 	WrongAnimal& 	operator=(const WrongAnimal &obj);
 	std::string	getType(void) const;
-	virtual void	makeSound(void) const;
+	void	makeSound(void) const;
 
 
 protected:

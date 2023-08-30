@@ -19,7 +19,7 @@ Dog::Dog(void)
 	return ;
 }
 
-Dog::Dog(const Dog &obj)
+Dog::Dog(const Dog &obj): Animal(obj)
 {
 	std::cout << "Copy dog constructor called" << std::endl;
 	*this = obj;
